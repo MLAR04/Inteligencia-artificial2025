@@ -11,15 +11,21 @@ padres={
 
 
 def son_hermanos(x,y):
-    for padre in padres.values(): #usamos .values() porque "in" por sí solo verifica si hay una cadena dentro de otra. 
-        if x in padre and y in padre:
+#for in por sí solo, verifica que un string exista dentro de otro string. En este caso
+#buscamos que los strings que vamos a comparar, estén en alguno de los "values" del diccionario.
+#Por eso usamos padres.values() en lugar de padres.
+    for padre in padres.values(): #este ciclo itera cada value del diccionario.
+        if x in padre and y in padre: #Verificamos que tanto "x" como "y" existan en el "value actual"
             print(f"{x} y {y} son Hermanos");
-            return True 
-    print(f"{x} y {y} no son hermanos")
-    return False 
+            return True #detenemos la función si se cumple la condición.
+    print(f"{x} y {y} no son hermanos") #El flujo llega aquí si en ninguna de las iteraciones
+    #se cumple la condición, por lo tanto no hay return y el flujo llega hasta aquí
+    return False
 
 
 def es_hijo_de(x,padre):
+#Verificamos que "x" SÍ exista en el value de la key con el mismo nombre de "padre" en
+#el diccionario
         if x in padres[padre]:
             print(f"{x} es hij@ de {padre}")
             return True
@@ -28,11 +34,13 @@ def es_hijo_de(x,padre):
             return False
 
 
-#quienes son los hijos de juan
+
 def sus_hijos_son(padre):
+#Primero verificamos que "padre" exista en las keys del diccionario. Si existe, significa
+#que tiene hijos y por tanto podemos iterarlo. 
     if padre in padres.keys():
-         hijos=[]
-         for elemento in padres[padre]:
+         hijos=[] 
+         for elemento in padres[padre]: #por cada hijo, lo metemos al arreglo hijos
               hijos.append(elemento)
          print(f"\nLos hijos de {padre} son: ")
          for elemento in hijos:
@@ -40,10 +48,10 @@ def sus_hijos_son(padre):
 
          return True;
     else:
-         print("Ese padre no existe en el mapa")
+         print("Ese padre no existe en el diccionario")
          return False;
 
 
-#son_hermanos("Patricia","Esther");      
-#es_hijo_de("Patricia","Raul");
-sus_hijos_son("Juan");
+son_hermanos("Patricia","Esther");      
+es_hijo_de("Patricia","Raul");
+sus_hijos_son("Raul");
