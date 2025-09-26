@@ -44,6 +44,6 @@ def sus_hijos_son(padre):
          return False;
 
 
-son_hermanos("Patricia","Esther");      
-es_hijo_de("Patricia","Raul");
+#son_hermanos("Patricia","Esther");      
+#es_hijo_de("Patricia","Raul");
 sus_hijos_son("Juan");

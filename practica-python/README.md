@@ -11,7 +11,7 @@ familiares sencillas entre personas con hechos definidos.
 ## Instrucciones para ejecutar el script
 1. Clonar el repositorio.
 2. Desde la linea de comandos, abrir el directorio donde se encuentra este proyecto.
-3. Ejecutar |python3 practicaPython.py|
+3. Ejecutar **python3 practicaPython.py**
 
 ## Uso de las funciones
 Para usar cada una de las funciones del script, el usuario debe basarse en los hechos
@@ -25,7 +25,7 @@ Verifica si "x" y "y" son hermanos.
   - "y" (str): nombre del segundo hijo
 - Ejemplo:
 son_hermanos("Patricia","Esther");
-#Salida: Patricia y Esther son Hermanos
+**Salida:** Patricia y Esther son Hermanos
 
 ### es_hijo_de(x,padre) 
 Verifica si "x" es hijo de "padre".
@@ -35,7 +35,7 @@ Verifica si "x" es hijo de "padre".
   - "padre" (str): nombre del padre
 - Ejemplo:
 es_hijo_de("Patricia","Raul");
-**Salida** 
+**Salida:** 
 Patricia es hij@ de Raul
 
 
@@ -45,8 +45,8 @@ Verifica que el padre exista, y de ser así, imprime sus hijos.
 - Parámetros:
   - "padre"  (str): nombre del padre
 - Ejemplo:
-es_hijo_de("Patricia","Raul");
-**Salida**
+sus_hijos_son("Juan");
+**Salida:**
 Los hijos de Juan son: 
 Maria
 Carlos
