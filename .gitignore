@@ -1,6 +1,5 @@
-# Archivos del sistema
 .DS_Store
 */.DS_Store
-
+.gitignore
 
 
